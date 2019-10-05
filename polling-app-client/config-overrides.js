@@ -1,8 +1,8 @@
-const {injectBabelPlugin} = require('react-app-rewired');
+const { injectBabelPlugin } = require('react-app-rewired');
 const rewireLess = require('react-app-rewire-less');
 
 module.exports = function override(config, env) {
-    config = injectBabelPlugin(['import', {libraryName: 'antd', style: true}],config);
+    config = injectBabelPlugin(['import', {libraryName: 'antd', style: true}], config);
     config = rewireLess.withLoaderOptions({
         modifyVars: {
             "@layout-body-background": "#FFFFFF",
@@ -10,7 +10,7 @@ module.exports = function override(config, env) {
             "@layout-footer-background": "#FFFFFF"
         },
         javascriptEnabled: true
-       })(config,env);
+       })(config, env);
        return config;
     };
 
