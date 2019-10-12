@@ -105,4 +105,3 @@ function ProfileDropdownMenu(props) {
 
 
 export default withRouter(AppHeader);
-© 2019 GitHub, Inc.
